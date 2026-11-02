@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { Suspense, useEffect, useState, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import CarCard from '@/components/CarCard';
@@ -14,12 +14,11 @@ const sortOptions = [
   { value: 'expensive', label: 'Сначала дороже' },
 ];
 
-export default function CatalogPage() {
+function CatalogContent() {
   const searchParams = useSearchParams();
   const [cars, setCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Filters
   const [brand, setBrand] = useState(searchParams.get('brand') || '');
   const [priceMin, setPriceMin] = useState(searchParams.get('priceMin') || '');
   const [priceMax, setPriceMax] = useState(searchParams.get('priceMax') || '');
@@ -84,13 +83,10 @@ export default function CatalogPage() {
         </div>
 
         {/* Sidebar Filters */}
-        <aside
-          className={`${filtersOpen ? 'block' : 'hidden'} lg:block w-full lg:w-72 shrink-0`}
-        >
+        <aside className={`${filtersOpen ? 'block' : 'hidden'} lg:block w-full lg:w-72 shrink-0`}>
           <div className="bg-white rounded-2xl shadow p-6 sticky top-20">
             <h2 className="font-bold text-[#0A2540] text-lg mb-5">Фильтры</h2>
 
-            {/* Brand */}
             <div className="mb-5">
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">
                 Марка
@@ -102,14 +98,11 @@ export default function CatalogPage() {
               >
                 <option value="">Все марки</option>
                 {brands.map((b) => (
-                  <option key={b} value={b}>
-                    {b}
-                  </option>
+                  <option key={b} value={b}>{b}</option>
                 ))}
               </select>
             </div>
 
-            {/* Price range */}
             <div className="mb-5">
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">
                 Цена, ₽
@@ -132,7 +125,6 @@ export default function CatalogPage() {
               </div>
             </div>
 
-            {/* Transmission */}
             <div className="mb-5">
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">
                 Коробка передач
@@ -165,7 +157,6 @@ export default function CatalogPage() {
 
         {/* Main content */}
         <div className="flex-1 min-w-0">
-          {/* Sort bar */}
           <div className="flex items-center justify-between mb-6 bg-white rounded-xl shadow px-4 py-3">
             <span className="text-sm text-gray-600">
               <span className="font-semibold text-[#0A2540]">{cars.length}</span> автомобилей
@@ -178,15 +169,12 @@ export default function CatalogPage() {
                 className="text-sm border-0 focus:outline-none text-gray-700 font-medium cursor-pointer"
               >
                 {sortOptions.map((o) => (
-                  <option key={o.value} value={o.value}>
-                    {o.label}
-                  </option>
+                  <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>
             </div>
           </div>
 
-          {/* Grid */}
           {loading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
               {[...Array(6)].map((_, i) => (
@@ -213,5 +201,23 @@ export default function CatalogPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CatalogPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="container mx-auto px-4 py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="bg-white rounded-2xl shadow animate-pulse h-80" />
+            ))}
+          </div>
+        </div>
+      }
+    >
+      <CatalogContent />
+    </Suspense>
   );
 }
