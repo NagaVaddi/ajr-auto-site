@@ -31,7 +31,7 @@ const autoDealerSchema = {
 
 async function getFeaturedCars(): Promise<Car[]> {
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    process.env.BASE_URL || 'http://localhost:3000';
   try {
     const res = await fetch(`${baseUrl}/api/cars?featured=true`, {
       next: { revalidate: 3600 },
@@ -51,7 +51,7 @@ export default async function HomePage() {
       {/* JSON-LD AutoDealer Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(autoDealerSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(autoDealerSchema).replace(/</g, '\\u003c') }}
       />
 
       <HeroSection />

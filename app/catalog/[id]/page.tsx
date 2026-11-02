@@ -11,7 +11,7 @@ interface Props {
 }
 
 async function getCar(id: string): Promise<Car | null> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
   try {
     const res = await fetch(`${baseUrl}/api/cars?id=${id}`, { next: { revalidate: 3600 } });
     if (!res.ok) return null;
@@ -81,7 +81,7 @@ export default async function VehicleDetailPage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(vehicleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(vehicleSchema).replace(/</g, '\\u003c') }}
       />
 
       <div className="container mx-auto px-4 py-10">
