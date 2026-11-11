@@ -21,8 +21,8 @@ const orgSchema = {
   name: 'AJR Auto Cars',
   description: 'Premium Japan and Korea import vehicles — Ferrari, Porsche, Genesis and more',
   url: 'https://ajrautocars.netlify.app',
-  telephone: '+18885257386',
-  email: 'info@ajrauto.com',
+  telephone: '+971503240800',
+  email: 'info@ajrline.com',
   openingHours: 'Mo-Su 09:00-21:00',
   areaServed: 'Worldwide',
 };

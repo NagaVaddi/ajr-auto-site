@@ -72,7 +72,7 @@ export default function BuyBox({ car, locale }: { car: Car; locale: string }) {
               {t('payFull')}
             </button>
             <a
-              href={`https://wa.me/18885257386?text=${whatsappText}`}
+              href={`https://wa.me/971503240800?text=${whatsappText}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#25D366] text-white font-heading font-bold uppercase tracking-widest px-6 py-3.5 hover:bg-[#1ebe57] transition-colors flex items-center justify-center gap-2 text-sm"
@@ -91,7 +91,7 @@ export default function BuyBox({ car, locale }: { car: Car; locale: string }) {
             <p className="text-white/60 text-xs">Join the waitlist — we'll notify you if it becomes available.</p>
           </div>
           <a
-            href={`https://wa.me/18885257386?text=${whatsappText}`}
+            href={`https://wa.me/971503240800?text=${whatsappText}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-[#25D366] text-white font-heading font-bold uppercase tracking-widest px-6 py-3.5 hover:bg-[#1ebe57] transition-colors flex items-center justify-center gap-2 text-sm"

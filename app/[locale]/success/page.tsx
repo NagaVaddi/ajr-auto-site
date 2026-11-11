@@ -41,7 +41,7 @@ export default async function SuccessPage({ params: { locale } }: { params: { lo
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="https://wa.me/18885257386"
+            href="https://wa.me/971503240800"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 bg-[#25D366] text-white font-heading font-bold uppercase tracking-widest py-4 flex items-center justify-center gap-2 hover:bg-[#1ebe57] transition-colors text-sm"

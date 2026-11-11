@@ -50,20 +50,20 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0 text-[#E53E3E]" />
-                <a href="tel:+18885257386" className="hover:text-white transition-colors">
-                  +1 (888) 525-7386
+                <a href="tel:+971503240800" className="hover:text-white transition-colors">
+                  +971 50 324 0800
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0 text-[#E53E3E]" />
-                <a href="mailto:info@ajrauto.com" className="hover:text-white transition-colors">
-                  info@ajrauto.com
+                <a href="mailto:info@ajrline.com" className="hover:text-white transition-colors">
+                  info@ajrline.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MessageCircle size={16} className="shrink-0 text-[#25D366]" />
                 <a
-                  href="https://wa.me/18885257386"
+                  href="https://wa.me/971503240800"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"

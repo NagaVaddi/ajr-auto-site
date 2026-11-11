@@ -22,7 +22,7 @@ export default function Footer({ locale }: { locale: string }) {
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">{t('tagline')}</p>
             <div className="flex gap-3 mt-6">
               <a
-                href="https://wa.me/18885257386"
+                href="https://wa.me/971503240800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center hover:bg-japan-red hover:border-japan-red transition-colors"
@@ -31,14 +31,14 @@ export default function Footer({ locale }: { locale: string }) {
                 <MessageCircle size={16} />
               </a>
               <a
-                href="tel:+18885257386"
+                href="tel:+971503240800"
                 className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center hover:bg-japan-red hover:border-japan-red transition-colors"
                 aria-label="Phone"
               >
                 <Phone size={16} />
               </a>
               <a
-                href="mailto:info@ajrauto.com"
+                href="mailto:info@ajrline.com"
                 className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center hover:bg-japan-red hover:border-japan-red transition-colors"
                 aria-label="Email"
               >
@@ -72,16 +72,16 @@ export default function Footer({ locale }: { locale: string }) {
           <div>
             <h3 className="font-heading font-bold text-white uppercase tracking-widest text-sm mb-6">{t('contact')}</h3>
             <div className="space-y-4">
-              <a href="tel:+18885257386" className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors">
+              <a href="tel:+971503240800" className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors">
                 <Phone size={14} className="text-japan-red shrink-0" />
                 {t('phone')}
               </a>
-              <a href="mailto:info@ajrauto.com" className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors">
+              <a href="mailto:info@ajrline.com" className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors">
                 <Mail size={14} className="text-japan-red shrink-0" />
                 {t('email')}
               </a>
               <a
-                href="https://wa.me/18885257386"
+                href="https://wa.me/971503240800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors"

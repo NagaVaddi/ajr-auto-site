@@ -30,7 +30,7 @@ export default function ClosingCTA({ locale }: { locale: string }) {
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="https://wa.me/18885257386"
+              href="https://wa.me/971503240800"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 border-2 border-white text-white font-heading font-bold uppercase tracking-widest px-8 py-4 hover:bg-white/10 transition-colors text-sm"

@@ -62,8 +62,8 @@ export default async function VehicleDetailPage({ params }: Props) {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'AutoDealer',
-        name: 'AJR Auto Parts',
-        telephone: '+18885257386',
+        name: 'AJR Auto Cars',
+        telephone: '+971503240800',
       },
     },
   };
@@ -169,14 +169,14 @@ export default async function VehicleDetailPage({ params }: Props) {
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+18885257386"
+                href="tel:+971503240800"
                 className="flex items-center justify-center gap-2 bg-[#E53E3E] hover:bg-[#c53030] text-white font-bold py-3.5 rounded-xl text-base transition-colors"
               >
                 <Phone size={20} />
                 Call to Enquire
               </a>
               <a
-                href={`https://wa.me/18885257386?text=${whatsappText}`}
+                href={`https://wa.me/971503240800?text=${whatsappText}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold py-3.5 rounded-xl text-base transition-colors"
@@ -185,7 +185,7 @@ export default async function VehicleDetailPage({ params }: Props) {
                 WhatsApp Enquiry
               </a>
               <a
-                href="mailto:info@ajrauto.com"
+                href="mailto:info@ajrline.com"
                 className="flex items-center justify-center gap-2 border-2 border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold py-3.5 rounded-xl text-base transition-colors"
               >
                 <Globe size={20} />

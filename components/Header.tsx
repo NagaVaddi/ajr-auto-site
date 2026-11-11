@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { Phone, MessageCircle, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-const PHONE = '+1 (888) 525-7386';
-const PHONE_HREF = 'tel:+18885257386';
-const WHATSAPP_HREF = 'https://wa.me/18885257386';
+const PHONE = '+971 50 324 0800';
+const PHONE_HREF = 'tel:+971503240800';
+const WHATSAPP_HREF = 'https://wa.me/971503240800';
 
 const navLinks = [
   { href: '/catalog', label: 'Catalog' },

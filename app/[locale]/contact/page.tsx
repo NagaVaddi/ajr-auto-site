@@ -102,26 +102,26 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             <div>
               <h2 className="font-heading font-bold text-xl text-white uppercase tracking-wider mb-6">Direct Contact</h2>
               <div className="space-y-4">
-                <a href="tel:+18885257386" className="flex items-center gap-4 group">
+                <a href="tel:+971503240800" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-japan-red group-hover:bg-japan-red/10 transition-colors">
                     <Phone size={18} className="text-japan-red" />
                   </div>
                   <div>
                     <div className="text-white/30 text-[10px] font-heading uppercase tracking-widest">Phone</div>
-                    <div className="text-white text-sm">+1 (888) 525-7386</div>
+                    <div className="text-white text-sm">+971 50 324 0800</div>
                   </div>
                 </a>
-                <a href="mailto:info@ajrauto.com" className="flex items-center gap-4 group">
+                <a href="mailto:info@ajrline.com" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-japan-red group-hover:bg-japan-red/10 transition-colors">
                     <Mail size={18} className="text-japan-red" />
                   </div>
                   <div>
                     <div className="text-white/30 text-[10px] font-heading uppercase tracking-widest">Email</div>
-                    <div className="text-white text-sm">info@ajrauto.com</div>
+                    <div className="text-white text-sm">info@ajrline.com</div>
                   </div>
                 </a>
                 <a
-                  href="https://wa.me/18885257386"
+                  href="https://wa.me/971503240800"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"

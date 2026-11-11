@@ -65,7 +65,7 @@ export default function Header({ locale }: { locale: string }) {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher locale={locale} />
             <a
-              href="https://wa.me/18885257386"
+              href="https://wa.me/971503240800"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-japan-red text-white text-xs font-heading font-bold uppercase tracking-widest px-5 py-2.5 hover:bg-red-700 transition-colors"
@@ -101,7 +101,7 @@ export default function Header({ locale }: { locale: string }) {
             <div className="pt-4 flex items-center justify-between">
               <LanguageSwitcher locale={locale} />
               <a
-                href="https://wa.me/18885257386"
+                href="https://wa.me/971503240800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-japan-red text-white text-xs font-heading font-bold uppercase tracking-widest px-4 py-2.5"

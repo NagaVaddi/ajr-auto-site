@@ -55,7 +55,7 @@ export default async function VehicleDetailPage({ params: { locale, id } }: Prop
       price: car.price,
       priceCurrency: 'USD',
       availability: `https://schema.org/${car.status === 'Available' ? 'InStock' : car.status === 'Sold' ? 'SoldOut' : 'PreOrder'}`,
-      seller: { '@type': 'AutoDealer', name: 'AJR Auto Cars', telephone: '+18885257386' },
+      seller: { '@type': 'AutoDealer', name: 'AJR Auto Cars', telephone: '+971503240800' },
     },
   };
 
