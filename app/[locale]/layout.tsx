@@ -2,25 +2,10 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
-import { Oswald, Inter } from 'next/font/google';
 import '../globals.css';
 import LenisProvider from '@/components/layout/LenisProvider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-
-const oswald = Oswald({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-heading',
-  display: 'swap',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-body',
-  display: 'swap',
-});
 
 const locales = ['en', 'ru', 'ar', 'ja'];
 
@@ -56,7 +41,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
-      className={`${oswald.variable} ${inter.variable}`}
+      className="font-body"
     >
       <body className="bg-obsidian text-white antialiased font-body">
         <NextIntlClientProvider locale={locale} messages={messages}>
