@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-6 text-sm text-center text-gray-500">
-          © {new Date().getFullYear()} AJR Auto Parts. All rights reserved.
+          © {new Date().getFullYear()} AJR Auto Cars. All rights reserved.
         </div>
       </div>
     </footer>

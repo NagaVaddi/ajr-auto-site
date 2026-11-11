@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "inventory": "Inventory",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge1": "Japan",
+    "badge2": "Korea",
+    "line1": "Premium",
+    "line2": "Import Cars",
+    "line3": "Direct from Asia",
+    "subtitle": "Ferrari, Porsche, Genesis & more — sourced directly from Japan and Korea. Clean titles, full auction history, worldwide export.",
+    "cta1": "View Inventory",
+    "cta2": "How It Works"
+  },
+  "trust": {
+    "items": ["150-Point Inspection", "Full Auction Sheets", "Door-to-Door Shipping", "Clean Titles", "Worldwide Export", "Grade 4–5 Cars Only", "Same-Day Response", "10+ Years Experience"]
+  },
+  "featured": {
+    "title": "Featured",
+    "titleAccent": "Vehicles",
+    "subtitle": "Hand-picked Japan & Korea imports",
+    "viewAll": "View All Inventory"
+  },
+  "how": {
+    "title": "How It",
+    "titleAccent": "Works",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Browse & Select",
+        "desc": "Find your car in our Japan & Korea catalog. WhatsApp us for a live video walk-around from the auction floor."
+      },
+      {
+        "num": "02",
+        "title": "Reserve Online",
+        "desc": "Secure your vehicle with a small deposit. We handle deregistration, export docs and shipping end-to-end."
+      },
+      {
+        "num": "03",
+        "title": "Receive Worldwide",
+        "desc": "Your car arrives at your nearest port in 2–4 weeks. Fully tracked, door-to-door delivery available."
+      }
+    ]
+  },
+  "inventory": {
+    "title": "Global",
+    "titleAccent": "Inventory",
+    "count": "{count} vehicles available",
+    "filters": {
+      "origin": "Origin",
+      "brand": "Brand",
+      "priceUsd": "Price (USD)",
+      "status": "Status",
+      "all": "All",
+      "allBrands": "All Brands",
+      "available": "Available",
+      "reserved": "Reserved",
+      "sold": "Sold",
+      "clearFilters": "Clear Filters",
+      "minPrice": "Min",
+      "maxPrice": "Max"
+    },
+    "sort": {
+      "newest": "Newest First",
+      "cheapest": "Lowest Price",
+      "expensive": "Highest Price"
+    },
+    "noResults": "No vehicles match your filters",
+    "clearToSeeAll": "Clear filters to see all vehicles"
+  },
+  "vehicle": {
+    "available": "Available",
+    "reserved": "Reserved",
+    "sold": "Sold",
+    "year": "Year",
+    "mileage": "Mileage",
+    "engine": "Engine",
+    "transmission": "Transmission",
+    "drive": "Drive",
+    "color": "Color",
+    "origin": "Origin",
+    "location": "Location",
+    "grade": "Auction Grade",
+    "chassis": "Chassis",
+    "reserveNow": "Reserve Now",
+    "depositRequired": "deposit to reserve",
+    "payFull": "Pay in Full — Wire Transfer",
+    "whatsappWalkthrough": "WhatsApp Video Walkaround",
+    "description": "Vehicle Description",
+    "backToInventory": "Back to Inventory",
+    "specs": "Specifications",
+    "inquire": "Inquire Now",
+    "shareThisVehicle": "Share this vehicle"
+  },
+  "checkout": {
+    "title": "Secure Reservation",
+    "subtitle": "Complete your deposit to reserve this vehicle",
+    "vehicle": "Vehicle",
+    "depositAmount": "Deposit Amount",
+    "totalVehiclePrice": "Total Vehicle Price",
+    "proceedToPayment": "Proceed to Payment",
+    "processing": "Processing...",
+    "secure": "256-bit SSL encryption · Stripe powered"
+  },
+  "success": {
+    "title": "Reservation Confirmed!",
+    "subtitle": "Your vehicle is now reserved for 7 days.",
+    "nextSteps": "Next Steps",
+    "step1": "Upload your passport / government ID",
+    "step2": "Choose your destination port",
+    "step3": "Sign the export agreement",
+    "step4": "Complete full payment via wire transfer",
+    "contactWhatsapp": "Message us on WhatsApp",
+    "backHome": "Back to Home"
+  },
+  "contact": {
+    "title": "Get in",
+    "titleAccent": "Touch",
+    "subtitle": "Questions about a vehicle? Ready to buy? We respond within hours.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone / WhatsApp",
+    "vehicle": "Vehicle of Interest (optional)",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent!",
+    "sentDesc": "We'll respond within a few hours.",
+    "orWhatsapp": "Or reach us directly on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Premium Japan & Korea import vehicles. Direct from auction to your door.",
+    "links": "Quick Links",
+    "contact": "Contact",
+    "phone": "+1 (888) 525-7386",
+    "email": "info@ajrauto.com",
+    "rights": "© {year} AJR Auto Parts. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

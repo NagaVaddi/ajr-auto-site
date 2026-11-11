@@ -3,27 +3,20 @@ export interface Car {
   brand: string;
   model: string;
   year: number;
-  price: number;        // USD
-  priceJpy?: number;   // JPY (secondary display)
-  mileage: number;     // km
+  price: number;
+  depositAmount: number;
+  priceJpy?: number;
+  status: 'Available' | 'Reserved' | 'Sold';
+  mileage: number;
   engine: string;
   transmission: string;
   drive: string;
   color: string;
   origin: 'Japan' | 'Korea';
-  location?: string;   // city, e.g. "Tokyo", "Hiroshima"
+  location: string;
+  auctionGrade: string;
+  chassisCode?: string;
   images: string[];
   description: string;
   isFeatured: boolean;
-}
-
-export interface SearchFilters {
-  brand?: string;
-  model?: string;
-  priceMin?: number;
-  priceMax?: number;
-  transmission?: string;
-  yearMin?: number;
-  yearMax?: number;
-  origin?: 'Japan' | 'Korea';
 }

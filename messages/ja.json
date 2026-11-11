@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "inventory": "在庫一覧",
+    "howItWorks": "ご利用方法",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge1": "日本",
+    "badge2": "韓国",
+    "line1": "プレミアム",
+    "line2": "輸入車",
+    "line3": "アジア直送",
+    "subtitle": "フェラーリ、ポルシェ、ジェネシスなど — 日本・韓国から直輸入。クリーンタイトル、オークション履歴完備、世界中に輸出対応。",
+    "cta1": "在庫を見る",
+    "cta2": "ご利用方法"
+  },
+  "trust": {
+    "items": ["150項目検査済み", "オークションシート完備", "ドアツードア配送", "クリーンタイトル", "世界輸出対応", "グレード4-5のみ", "即日対応", "10年以上の実績"]
+  },
+  "featured": {
+    "title": "おすすめ",
+    "titleAccent": "車両",
+    "subtitle": "日本・韓国からの厳選輸入車",
+    "viewAll": "全在庫を見る"
+  },
+  "how": {
+    "title": "ご利用",
+    "titleAccent": "方法",
+    "steps": [
+      {
+        "num": "01",
+        "title": "車を選ぶ",
+        "desc": "カタログからお好みの車を探してください。WhatsAppでライブ動画ウォークスルーをリクエストできます。"
+      },
+      {
+        "num": "02",
+        "title": "オンライン予約",
+        "desc": "少額の手付金で車両を確保。輸出書類や輸送手配は全てお任せください。"
+      },
+      {
+        "num": "03",
+        "title": "世界中にお届け",
+        "desc": "2〜4週間でお近くの港に到着。全過程を追跡可能、ドアツードア配送もご利用可能。"
+      }
+    ]
+  },
+  "inventory": {
+    "title": "グローバル",
+    "titleAccent": "在庫",
+    "count": "{count}台の在庫",
+    "filters": {
+      "origin": "産地",
+      "brand": "ブランド",
+      "priceUsd": "価格 (USD)",
+      "status": "ステータス",
+      "all": "すべて",
+      "allBrands": "全ブランド",
+      "available": "在庫あり",
+      "reserved": "予約済み",
+      "sold": "売却済み",
+      "clearFilters": "フィルターをクリア",
+      "minPrice": "最低価格",
+      "maxPrice": "最高価格"
+    },
+    "sort": {
+      "newest": "新着順",
+      "cheapest": "価格が低い順",
+      "expensive": "価格が高い順"
+    },
+    "noResults": "条件に一致する車両がありません",
+    "clearToSeeAll": "フィルターをクリアして全車両を表示"
+  },
+  "vehicle": {
+    "available": "在庫あり",
+    "reserved": "予約済み",
+    "sold": "売却済み",
+    "year": "年式",
+    "mileage": "走行距離",
+    "engine": "エンジン",
+    "transmission": "トランスミッション",
+    "drive": "駆動方式",
+    "color": "カラー",
+    "origin": "産地",
+    "location": "所在地",
+    "grade": "オークショングレード",
+    "chassis": "シャシーコード",
+    "reserveNow": "今すぐ予約",
+    "depositRequired": "の手付金で予約",
+    "payFull": "全額払い — 銀行振込",
+    "whatsappWalkthrough": "WhatsApp動画ウォークスルー",
+    "description": "車両説明",
+    "backToInventory": "在庫一覧に戻る",
+    "specs": "スペック",
+    "inquire": "お問い合わせ",
+    "shareThisVehicle": "シェアする"
+  },
+  "checkout": {
+    "title": "安全な予約",
+    "subtitle": "手付金を支払って車両を予約",
+    "vehicle": "車両",
+    "depositAmount": "手付金額",
+    "totalVehiclePrice": "車両総額",
+    "proceedToPayment": "お支払いへ進む",
+    "processing": "処理中...",
+    "secure": "256ビットSSL暗号化 · Stripe決済"
+  },
+  "success": {
+    "title": "予約確定！",
+    "subtitle": "車両は7日間確保されます。",
+    "nextSteps": "次のステップ",
+    "step1": "パスポート/身分証明書をアップロード",
+    "step2": "到着港を選択",
+    "step3": "輸出契約書に署名",
+    "step4": "銀行振込で残金を支払い",
+    "contactWhatsapp": "WhatsAppでお問い合わせ",
+    "backHome": "ホームに戻る"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "titleAccent": "",
+    "subtitle": "車両についてご質問？購入をお考えですか？数時間以内にお返事します。",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "phone": "電話番号 / WhatsApp",
+    "vehicle": "ご興味の車両（任意）",
+    "message": "メッセージ",
+    "send": "送信",
+    "sending": "送信中...",
+    "sent": "メッセージを送信しました！",
+    "sentDesc": "数時間以内にご返信します。",
+    "orWhatsapp": "またはWhatsAppで直接ご連絡ください"
+  },
+  "footer": {
+    "tagline": "日本・韓国からのプレミアム輸入車。オークションから玄関先まで直送。",
+    "links": "クイックリンク",
+    "contact": "お問い合わせ",
+    "phone": "+1 (888) 525-7386",
+    "email": "info@ajrauto.com",
+    "rights": "© {year} AJR Auto Parts. 全著作権所有。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+}
