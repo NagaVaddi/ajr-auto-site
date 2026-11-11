@@ -225,24 +225,45 @@ export default function VehicleDetail({ car, locale }: { car: Car; locale: strin
 
               {/* CTA buttons */}
               <div className="p-5 space-y-3">
+                {/* Reserve Now */}
                 <a
-                  href={`https://wa.me/971503240800?text=${waMsg}`}
+                  href={`https://wa.me/971503240800?text=${encodeURIComponent(`Hi, I want to RESERVE the ${car.year} ${car.brand} ${car.model}. Deposit: $${car.depositAmount?.toLocaleString('en-US')}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2.5 bg-japan-red hover:bg-red-700 text-white font-heading font-bold uppercase tracking-widest text-sm py-4 transition-colors"
                 >
                   <Zap size={15} />
-                  Order Import
+                  Reserve Now — ${car.depositAmount?.toLocaleString('en-US')}
                 </a>
+
+                {/* Pay in Full */}
                 <a
-                  href={`https://wa.me/971503240800?text=${waMsg}`}
+                  href={`https://wa.me/971503240800?text=${encodeURIComponent(`Hi, I want to PAY IN FULL for the ${car.year} ${car.brand} ${car.model} — $${car.price.toLocaleString('en-US')}. Please send wire transfer details.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 border border-white/15 text-white/60 hover:border-white/40 hover:text-white font-heading font-bold uppercase tracking-widest text-xs py-3.5 transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-[#1a1a1a] border border-white/15 text-white/80 hover:border-white/40 hover:text-white font-heading font-bold uppercase tracking-widest text-xs py-3.5 transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <path d="M2 10h20"/>
+                  </svg>
+                  Pay in Full — Wire Transfer
+                </a>
+
+                {/* WhatsApp Video Walkaround */}
+                <a
+                  href={`https://wa.me/971503240800?text=${encodeURIComponent(`Hi, I'd like a WhatsApp VIDEO WALKAROUND of the ${car.year} ${car.brand} ${car.model}. Please send a live video.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1db954] text-white font-heading font-bold uppercase tracking-widest text-xs py-3.5 transition-colors"
                 >
                   <MessageCircle size={13} />
-                  Request Details
+                  WhatsApp Video Walkaround
                 </a>
+
+                <p className="text-center text-white/25 text-[11px] font-body pt-1">
+                  🔒 Secure Payment · 100% Money-Back Guarantee
+                </p>
               </div>
 
               {/* Quick info */}
