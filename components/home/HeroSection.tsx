@@ -45,27 +45,6 @@ export default function HeroSection({ locale }: { locale: string }) {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent via-transparent to-obsidian pointer-events-none hidden md:block" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          className="flex gap-3 mb-8"
-        >
-          {[t('badge1'), t('badge2')].map((badge, i) => (
-            <motion.span
-              key={badge}
-              custom={i}
-              variants={lineVariants}
-              className={`px-3 py-1 text-xs font-heading font-bold uppercase tracking-widest border ${
-                i === 0
-                  ? 'border-japan-flag text-japan-flag bg-japan-flag/10'
-                  : 'border-korea-flag text-blue-400 bg-blue-900/20'
-              }`}
-            >
-              {badge}
-            </motion.span>
-          ))}
-        </motion.div>
-
         <div className="mb-6">
           {titleWords.map((word, i) => (
             <div key={i} className="overflow-hidden block">
