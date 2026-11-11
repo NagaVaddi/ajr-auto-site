@@ -45,6 +45,17 @@ export default function HeroSection({ locale }: { locale: string }) {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent via-transparent to-obsidian pointer-events-none hidden md:block" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 border border-white/20 px-4 py-1.5 mb-8"
+        >
+          <span className="text-xs font-heading uppercase tracking-[0.3em] text-white/50">🇯🇵 Japan · 🇰🇷 Korea</span>
+          <span className="w-px h-3 bg-white/20" />
+          <span className="text-xs font-heading uppercase tracking-[0.3em] text-japan-red">Premium Import</span>
+        </motion.div>
+
         <div className="mb-6">
           {titleWords.map((word, i) => (
             <div key={i} className="overflow-hidden block">
