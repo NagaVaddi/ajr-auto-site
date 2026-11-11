@@ -63,12 +63,12 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="mt-12 pt-10 border-t border-white/10">
-          <Link
-            href="/en/how-it-works"
+          <a
+            href="how-it-works"
             className="text-white/40 font-heading text-xs uppercase tracking-widest hover:text-white transition-colors"
           >
             Learn more about the process →
-          </Link>
+          </a>
         </div>
       </div>
     </section>

@@ -3,13 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-
-const Globe3D = dynamic(() => import('@/components/three/Globe3D'), {
-  ssr: false,
-  loading: () => null,
-});
 
 const wordVariants = {
   hidden: { y: '110%', opacity: 0 },
@@ -36,13 +30,14 @@ export default function HeroSection({ locale }: { locale: string }) {
   return (
     <section className="relative min-h-screen bg-obsidian flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-japan-red/5 via-transparent to-transparent" />
-      <div className="absolute top-0 right-0 w-full h-full md:w-[55%]">
-        <div className="w-full h-full opacity-70">
-          <Globe3D />
-        </div>
-      </div>
-
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-transparent via-transparent to-obsidian pointer-events-none hidden md:block" />
+      {/* Animated grid background */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: 'linear-gradient(rgba(230,0,18,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(230,0,18,0.3) 1px, transparent 1px)',
+        backgroundSize: '60px 60px',
+      }} />
+      {/* Radial spotlight */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-japan-red/10 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-japan-red/5 blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <motion.div
