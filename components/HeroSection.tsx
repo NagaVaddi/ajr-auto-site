@@ -4,20 +4,19 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Search } from 'lucide-react';
 
-const brands = ['Toyota', 'Kia', 'Hyundai', 'BMW', 'Volkswagen', 'Mercedes-Benz', 'Audi', 'Lexus'];
-const transmissions = ['Автомат', 'Механика', 'Робот', 'Вариатор'];
+const brands = ['Ferrari', 'Porsche', 'Toyota', 'Hyundai', 'Kia', 'BMW', 'Lexus', 'Mercedes-Benz'];
 
 export default function HeroSection() {
   const router = useRouter();
   const [brand, setBrand] = useState('');
-  const [priceMin, setPriceMin] = useState('');
+  const [origin, setOrigin] = useState('');
   const [priceMax, setPriceMax] = useState('');
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const params = new URLSearchParams();
     if (brand) params.set('brand', brand);
-    if (priceMin) params.set('priceMin', priceMin);
+    if (origin) params.set('origin', origin);
     if (priceMax) params.set('priceMax', priceMax);
     router.push(`/catalog?${params.toString()}`);
   };
@@ -40,13 +39,17 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-3xl">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="bg-[#BC002D] text-white text-xs font-bold px-2 py-0.5 rounded">Japan</span>
+            <span className="bg-[#003478] text-white text-xs font-bold px-2 py-0.5 rounded">Korea</span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-            Надёжные автомобили
-            <span className="text-[#E53E3E]"> с гарантией</span>
+            Premium Import Cars
+            <span className="text-[#E53E3E]"> Direct from Asia</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-            Купить авто с пробегом в Москве. Проверенные автомобили, юридическая чистота, выгодный
-            кредит.
+            Ferrari, Porsche &amp; more — sourced directly from Japan and Korea. Clean titles,
+            full auction history, worldwide export.
           </p>
 
           {/* Search Widget */}
@@ -57,14 +60,14 @@ export default function HeroSection() {
             {/* Brand */}
             <div className="flex flex-col">
               <label className="text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide">
-                Марка
+                Brand
               </label>
               <select
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
                 className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0A2540]"
               >
-                <option value="">Все марки</option>
+                <option value="">All Brands</option>
                 {brands.map((b) => (
                   <option key={b} value={b}>
                     {b}
@@ -73,28 +76,30 @@ export default function HeroSection() {
               </select>
             </div>
 
-            {/* Price from */}
+            {/* Origin */}
             <div className="flex flex-col">
               <label className="text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide">
-                Цена от, ₽
+                Origin
               </label>
-              <input
-                type="number"
-                placeholder="500 000"
-                value={priceMin}
-                onChange={(e) => setPriceMin(e.target.value)}
+              <select
+                value={origin}
+                onChange={(e) => setOrigin(e.target.value)}
                 className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0A2540]"
-              />
+              >
+                <option value="">Japan &amp; Korea</option>
+                <option value="Japan">Japan Only</option>
+                <option value="Korea">Korea Only</option>
+              </select>
             </div>
 
-            {/* Price to */}
+            {/* Max price */}
             <div className="flex flex-col">
               <label className="text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide">
-                Цена до, ₽
+                Max Price (USD)
               </label>
               <input
                 type="number"
-                placeholder="5 000 000"
+                placeholder="e.g. 300000"
                 value={priceMax}
                 onChange={(e) => setPriceMax(e.target.value)}
                 className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0A2540]"
@@ -108,7 +113,7 @@ export default function HeroSection() {
                 className="flex items-center justify-center gap-2 bg-[#E53E3E] hover:bg-[#c53030] text-white font-bold py-2.5 px-6 rounded-lg transition-colors duration-200 text-sm"
               >
                 <Search size={16} />
-                Найти
+                Search Cars
               </button>
             </div>
           </form>

@@ -1,25 +1,25 @@
-import { ShieldCheck, FileSearch, RefreshCw, Percent } from 'lucide-react';
+import { ShieldCheck, FileSearch, Globe, Truck } from 'lucide-react';
 
 const items = [
   {
     icon: ShieldCheck,
-    title: 'Проверка по 150 пунктам',
-    desc: 'Каждый автомобиль проходит детальную диагностику перед продажей',
+    title: 'Fully Inspected',
+    desc: 'Every vehicle passes a 150-point inspection before listing — engine, body, electrics, all checked.',
   },
   {
     icon: FileSearch,
-    title: 'Гарантия юр. чистоты',
-    desc: 'Проверка по базам ГИБДД, ФСП, залогов и ограничений',
+    title: 'Full History',
+    desc: 'Japanese auction sheets, dealer records, and Korean inspection reports included with every car.',
   },
   {
-    icon: RefreshCw,
-    title: 'Trade-in за 1 день',
-    desc: 'Сдайте ваш автомобиль в зачёт и получите новый уже сегодня',
+    icon: Globe,
+    title: 'Worldwide Export',
+    desc: 'We handle all export paperwork, deregistration, and shipping to your country door-to-door.',
   },
   {
-    icon: Percent,
-    title: 'Автокредит от 5%',
-    desc: 'Партнёрство с 15 банками. Одобрение за 30 минут',
+    icon: Truck,
+    title: 'Fast Delivery',
+    desc: 'Cars ship within 2 weeks of payment. Average transit time 2–4 weeks depending on destination.',
   },
 ];
 
@@ -28,7 +28,7 @@ export default function TrustBar() {
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-extrabold text-[#0A2540] text-center mb-10">
-          Почему выбирают нас
+          Why Choose AJR Auto
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => {

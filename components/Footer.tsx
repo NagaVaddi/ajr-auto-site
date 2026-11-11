@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,26 +10,26 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="bg-[#E53E3E] text-white font-bold text-xl px-3 py-1 rounded">
-                АВТ
+                AJR
               </div>
-              <span className="text-white font-bold text-xl">АВТО БРЕНД</span>
+              <span className="text-white font-bold text-xl">AUTO PARTS</span>
             </div>
             <p className="text-sm leading-relaxed">
-              Продажа проверенных автомобилей с пробегом в Москве. Гарантия юридической чистоты,
-              кредит, trade-in.
+              Premium Japan &amp; Korea import vehicles. Certified pre-owned, clean titles,
+              full service history. Export worldwide.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Навигация</h3>
+            <h3 className="text-white font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm">
               {[
-                { href: '/catalog', label: 'Каталог автомобилей' },
-                { href: '/about', label: 'О компании' },
-                { href: '/#trade-in', label: 'Trade-in' },
-                { href: '/#credit', label: 'Автокредит' },
-                { href: '/about#contacts', label: 'Контакты' },
+                { href: '/catalog', label: 'Car Catalog' },
+                { href: '/catalog?origin=Japan', label: 'Japan Imports' },
+                { href: '/catalog?origin=Korea', label: 'Korea Imports' },
+                { href: '/about', label: 'About Us' },
+                { href: '/about#contacts', label: 'Contact' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-white transition-colors">
@@ -42,22 +42,28 @@ export default function Footer() {
 
           {/* Contacts */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Контакты</h3>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-[#E53E3E]" />
-                <span>г. Москва, ул. Автозаводская, д. 15, стр. 2</span>
+                <span>Japan &amp; Korea sourced vehicles, exported worldwide</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0 text-[#E53E3E]" />
-                <a href="tel:+74951234567" className="hover:text-white transition-colors">
-                  +7 (495) 123-45-67
+                <a href="tel:+18885257386" className="hover:text-white transition-colors">
+                  +1 (888) 525-7386
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail size={16} className="shrink-0 text-[#E53E3E]" />
+                <a href="mailto:info@ajrauto.com" className="hover:text-white transition-colors">
+                  info@ajrauto.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MessageCircle size={16} className="shrink-0 text-[#25D366]" />
                 <a
-                  href="https://wa.me/74951234567"
+                  href="https://wa.me/18885257386"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -67,26 +73,26 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Clock size={16} className="shrink-0 text-[#E53E3E]" />
-                <span>Пн–Вс: 9:00 – 21:00</span>
+                <span>Mon–Sun: 9:00 AM – 9:00 PM</span>
               </li>
             </ul>
           </div>
 
-          {/* Guarantees */}
+          {/* Why Us */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Гарантии</h3>
+            <h3 className="text-white font-semibold mb-4">Why AJR</h3>
             <ul className="space-y-2 text-sm">
-              <li>✓ Проверка по 150 пунктам</li>
-              <li>✓ Юридическая чистота</li>
-              <li>✓ Trade-in за 1 день</li>
-              <li>✓ Кредит от 5%</li>
-              <li>✓ Гарантия после покупки</li>
+              <li>✓ Direct Japan &amp; Korea sourcing</li>
+              <li>✓ Full auction &amp; dealer history</li>
+              <li>✓ Clean title guaranteed</li>
+              <li>✓ Worldwide export service</li>
+              <li>✓ WhatsApp video inspections</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-6 text-sm text-center text-gray-500">
-          © {new Date().getFullYear()} АВТО БРЕНД. Все права защищены.
+          © {new Date().getFullYear()} AJR Auto Parts. All rights reserved.
         </div>
       </div>
     </footer>

@@ -3,12 +3,15 @@ export interface Car {
   brand: string;
   model: string;
   year: number;
-  price: number;
-  mileage: number;
+  price: number;        // USD
+  priceJpy?: number;   // JPY (secondary display)
+  mileage: number;     // km
   engine: string;
   transmission: string;
   drive: string;
   color: string;
+  origin: 'Japan' | 'Korea';
+  location?: string;   // city, e.g. "Tokyo", "Hiroshima"
   images: string[];
   description: string;
   isFeatured: boolean;
@@ -22,4 +25,5 @@ export interface SearchFilters {
   transmission?: string;
   yearMin?: number;
   yearMax?: number;
+  origin?: 'Japan' | 'Korea';
 }

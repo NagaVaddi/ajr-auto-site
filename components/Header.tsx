@@ -4,16 +4,15 @@ import Link from 'next/link';
 import { Phone, MessageCircle, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-const PHONE = '+7 (495) 123-45-67';
-const PHONE_HREF = 'tel:+74951234567';
-const WHATSAPP_HREF = 'https://wa.me/74951234567';
+const PHONE = '+1 (888) 525-7386';
+const PHONE_HREF = 'tel:+18885257386';
+const WHATSAPP_HREF = 'https://wa.me/18885257386';
 
 const navLinks = [
-  { href: '/catalog', label: 'Каталог' },
-  { href: '/about', label: 'О нас' },
-  { href: '/#trade-in', label: 'Trade-in' },
-  { href: '/#credit', label: 'Кредит' },
-  { href: '/about#contacts', label: 'Контакты' },
+  { href: '/catalog', label: 'Catalog' },
+  { href: '/about', label: 'About' },
+  { href: '/#how-it-works', label: 'How It Works' },
+  { href: '/about#contacts', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -26,9 +25,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="bg-[#E53E3E] text-white font-bold text-xl px-3 py-1 rounded">
-              АВТ
+              AJR
             </div>
-            <span className="text-white font-bold text-xl tracking-wide">АВТО БРЕНД</span>
+            <span className="text-white font-bold text-xl tracking-wide">AUTO PARTS</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -68,7 +67,7 @@ export default function Header() {
           <button
             className="md:hidden text-white p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Меню"
+            aria-label="Menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -105,7 +104,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-lg text-base font-semibold"
             >
               <MessageCircle size={18} />
-              Написать в WhatsApp
+              Message on WhatsApp
             </a>
           </div>
         </div>
