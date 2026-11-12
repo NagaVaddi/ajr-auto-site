@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { carsData } from '@/lib/data/cars';
+import { allCars } from '@/lib/data/cars';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -11,12 +11,12 @@ export async function GET(request: Request) {
   const brand = searchParams.get('brand');
 
   if (id) {
-    const car = carsData.find((c) => c.id === id);
+    const car = allCars.find((c) => c.id === id);
     if (!car) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     return NextResponse.json(car);
   }
 
-  let results = [...carsData];
+  let results = [...allCars];
 
   if (featured === 'true') results = results.filter((c) => c.isFeatured);
   if (origin) results = results.filter((c) => c.origin === origin);

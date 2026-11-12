@@ -47,6 +47,13 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
+      scale: {
+        '107': '1.07',
+      },
+      transitionDuration: {
+        '400': '400ms',
+        '700': '700ms',
+      },
     },
   },
   plugins: [],

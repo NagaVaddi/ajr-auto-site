@@ -70,3 +70,54 @@
     @apply font-heading font-bold text-4xl md:text-5xl xl:text-6xl uppercase tracking-tight text-white;
   }
 }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes floatParticle {
+  0%   { transform: translateY(0px) scale(1); opacity: 0.4; }
+  100% { transform: translateY(-18px) scale(1.4); opacity: 0.1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(230,0,18,0); }
+  50%       { box-shadow: 0 0 24px 2px rgba(230,0,18,0.25); }
+}
+
+@keyframes scanLine {
+  0%   { top: -2px; }
+  100% { top: 100%; }
+}
+
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.card-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.card-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.055) 50%, transparent 60%);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  animation: shimmer 1.4s linear infinite;
+}
+.card-shimmer:hover::after {
+  opacity: 1;
+}

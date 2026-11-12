@@ -16,7 +16,7 @@ export default function Footer({ locale }: { locale: string }) {
                 <span className="text-white font-heading font-bold text-sm tracking-widest">AJR</span>
               </div>
               <div className="font-heading font-bold text-white text-lg uppercase tracking-widest">
-                Auto Parts
+                Auto Cars
               </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">{t('tagline')}</p>
