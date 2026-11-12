@@ -323,12 +323,25 @@ export default function InventoryPage({ params: { locale } }: { params: { locale
   // Clear selected models when brands change
   useEffect(() => { setSelectedModels([]); }, [selectedBrands]);
 
-  const countDisplay = useCountUp(filtered.length);
-  const paginated    = filtered.slice(0, visibleCount);
-
   const hasFilters = !!(search || selectedBrands.length || selectedModels.length ||
     selectedOrigins.length || selectedDrives.length || selectedStatuses.length ||
     priceMin > 0 || priceMax < 1000000 || yearMin || yearMax);
+
+  // Show mock DB total when no filters active; mock brand sum when only brands selected;
+  // real filtered count when other filters narrow it down further
+  const displayCount = useMemo(() => {
+    if (!hasFilters) return DB_TOTAL;
+    if (selectedBrands.length && !selectedModels.length && !selectedOrigins.length &&
+        !selectedDrives.length && !selectedStatuses.length &&
+        priceMin === 0 && priceMax === 1000000 && !yearMin && !yearMax && !search) {
+      return selectedBrands.reduce((sum, b) => sum + (MOCK_BRAND_COUNTS[b] ?? filtered.length), 0);
+    }
+    return filtered.length;
+  }, [hasFilters, selectedBrands, selectedModels, selectedOrigins, selectedDrives,
+      selectedStatuses, priceMin, priceMax, yearMin, yearMax, search, filtered.length]);
+
+  const countDisplay = useCountUp(displayCount);
+  const paginated    = filtered.slice(0, visibleCount);
 
   const activeFilterCount =
     selectedBrands.length + selectedModels.length + selectedOrigins.length +
@@ -568,7 +581,7 @@ export default function InventoryPage({ params: { locale } }: { params: { locale
                 <span className="text-white/35 text-sm font-heading">vehicles found</span>
               </div>
               <div className="text-white/20 text-[10px] font-heading uppercase tracking-[0.3em] mt-0.5">
-                of {DB_TOTAL.toLocaleString()} in database
+                {hasFilters ? `of ${DB_TOTAL.toLocaleString()} in database` : 'in database'}
               </div>
             </div>
           </div>
