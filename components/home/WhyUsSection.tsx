@@ -71,7 +71,7 @@ export default function WhyUsSection() {
               initial={{ opacity: 0, x: i % 2 === 0 ? -24 : 24, y: 16 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ delay: i * 0.07, duration: 0.55, ease: [0.16, 1, 0.3, 1] as number[] }}
+              transition={{ delay: i * 0.07, duration: 0.55, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               whileHover={{ y: -4 }}
               className="group relative bg-black border border-white/10 hover:border-japan-red/35 p-6 transition-all duration-300 overflow-hidden"
             >

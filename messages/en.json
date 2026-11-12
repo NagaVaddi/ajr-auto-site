@@ -18,7 +18,16 @@
     "cta2": "How It Works"
   },
   "trust": {
-    "items": ["150-Point Inspection", "Full Auction Sheets", "Door-to-Door Shipping", "Clean Titles", "Worldwide Export", "Grade 4–5 Cars Only", "Same-Day Response", "10+ Years Experience"]
+    "items": [
+      "150-Point Inspection",
+      "Full Auction Sheets",
+      "Door-to-Door Shipping",
+      "Clean Titles",
+      "Worldwide Export",
+      "Grade 4–5 Cars Only",
+      "Same-Day Response",
+      "10+ Years Experience"
+    ]
   },
   "featured": {
     "title": "Featured",
@@ -63,7 +72,8 @@
       "sold": "Sold",
       "clearFilters": "Clear Filters",
       "minPrice": "Min",
-      "maxPrice": "Max"
+      "maxPrice": "Max",
+      "title": "Filters"
     },
     "sort": {
       "newest": "Newest First",

@@ -25,7 +25,7 @@ export default function ClosingCTA({ locale }: { locale: string }) {
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as number[] }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           className="text-center"
         >
           <motion.div
@@ -43,7 +43,7 @@ export default function ClosingCTA({ locale }: { locale: string }) {
               initial={{ y: '100%' }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.15, duration: 0.75, ease: [0.16, 1, 0.3, 1] as number[] }}
+              transition={{ delay: 0.15, duration: 0.75, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               className="font-heading font-bold text-4xl md:text-6xl text-white uppercase tracking-tight"
             >
               Browse Our Full Catalog

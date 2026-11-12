@@ -66,7 +66,7 @@ export default function HowItWorksSection() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ delay: i * 0.12, duration: 0.55, ease: [0.16, 1, 0.3, 1] as number[] }}
+              transition={{ delay: i * 0.12, duration: 0.55, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               whileHover={{ y: -6 }}
               className="group relative"
             >
